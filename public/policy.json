@@ -2,7 +2,7 @@
   "schema": 1,
   "plans": {
     "enforce": false,
-    "upgradeUrl": "https://eminifybot.com/#pricing",
+    "upgradeUrl": "https://orrabot.ai/#pricing",
     "limits": {
       "free": {
         "organisations": 1,
@@ -29,7 +29,7 @@
   "update": {
     "minimumVersion": null,
     "message": null,
-    "downloadUrl": "https://eminifybot.com/#download"
+    "downloadUrl": "https://orrabot.ai/#download"
   },
   "services": {
     "controlPlaneUrl": "https://accounts.eminifybot.com",

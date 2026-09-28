@@ -1,20 +1,20 @@
 import type { Metadata, Viewport } from "next";
 import { Onest, JetBrains_Mono } from "next/font/google";
-import { EmiSprite } from "@/components/Emi";
+import { OrraSprite } from "@/components/Orra";
 import "./globals.css";
 
 const onest = Onest({ subsets: ["latin"], variable: "--font-onest", display: "swap" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eminifybot.com"),
-  title: "EminifyBot: your AI team, one chat away",
+  metadataBase: new URL("https://orrabot.ai"),
+  title: "OrraBot: your AI team, one chat away",
   description: "Your own team of AI bots in a chat app, with a separate team for every company you run. Runs on the Claude, Codex and Grok you already use. Free for macOS, Windows and Linux.",
   openGraph: {
-    title: "EminifyBot: your AI team, one chat away",
+    title: "OrraBot: your AI team, one chat away",
     description: "Brief AI bots like teammates. Give every company its own team, budget and brand. Free desktop app.",
-    url: "https://eminifybot.com",
-    siteName: "EminifyBot",
+    url: "https://orrabot.ai",
+    siteName: "OrraBot",
     type: "website",
   },
   twitter: { card: "summary_large_image" },
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${onest.variable} ${mono.variable}`} suppressHydrationWarning>
       <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
       <body>
-        <EmiSprite />
+        <OrraSprite />
         {children}
       </body>
     </html>

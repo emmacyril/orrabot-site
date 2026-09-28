@@ -1,4 +1,4 @@
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { EMI } from "@/lib/content";
 
 export function ManyBots() {
@@ -38,9 +38,9 @@ export function ManyBots() {
           <h3>Put bots in one channel</h3>
           <p>Add a few bots to a channel and they hand work to each other. A Chief of Staff keeps the plan and chases what&apos;s late.</p>
           <div className="viz handoff">
-            <div className="who"><Emi color={EMI.violet} />Chief of Staff</div>
+            <div className="who"><Orra color={EMI.violet} />Chief of Staff</div>
             <div className="bub">Research, pull three competitor launches. Content, turn them into Friday&apos;s newsletter.</div>
-            <div className="who"><Emi color={EMI.green} />Research</div>
+            <div className="who"><Orra color={EMI.green} />Research</div>
             <div className="bub">Done. Notes are in the channel folder, over to Content.</div>
           </div>
         </div>

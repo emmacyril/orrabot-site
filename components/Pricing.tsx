@@ -7,7 +7,7 @@ export function Pricing() {
   return (
     <section className="sec wrap center" id="pricing">
       <h2 className="sec-title">Pricing</h2>
-      <p className="sec-sub">Your bots run on your own AI plans, so EminifyBot charges per company, never per token.</p>
+      <p className="sec-sub">Your bots run on your own AI plans, so OrraBot charges per company, never per token.</p>
       <div className="period" role="group" aria-label="Billing period">
         <button type="button" aria-pressed={!yearly} onClick={() => setYearly(false)}>Monthly</button>
         <button type="button" aria-pressed={yearly} onClick={() => setYearly(true)}>Yearly <span>2 months free</span></button>
@@ -30,7 +30,7 @@ export function Pricing() {
       </div>
       <div className="enterprise">
         <span><b>Hosted add-ons, any plan:</b> always-on bot computers from $29 a month each, managed AI credits, and phone access.</span>
-        <a className="btn btn-quiet" href={`mailto:${CONTACT}?subject=EminifyBot%20hosted`}>Contact sales</a>
+        <a className="btn btn-quiet" href={`mailto:${CONTACT}?subject=OrraBot%20hosted`}>Contact sales</a>
       </div>
     </section>
   );

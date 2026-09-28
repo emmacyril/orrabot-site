@@ -1,10 +1,10 @@
-export const REPO = "https://github.com/emmacyril/EminifyBot";
+export const REPO = "https://github.com/emmacyril/orrabot";
 export const RELEASES = `${REPO}/releases`;
 export const LATEST = `${RELEASES}/latest`;
-export const CONTACT = "hello@eminifybot.com";
+export const CONTACT = "hello@orrabot.ai";
 
 export const EMI = {
-  violet: "#7B61FF",
+  violet: "#FF6B3D",
   orange: "#FF7A45",
   green: "#20B486",
   blue: "#3D7BFF",
@@ -146,20 +146,20 @@ export const JOBS = [
 export const TIERS = [
   { name: "Personal", monthly: 0, yearly: 0, note: "Free forever", cta: "Download", href: "#download", primary: false,
     items: ["1 organisation", "Unlimited bots", "Computers, apps and voice", "All approval levels", "Your own AI plans and keys"] },
-  { name: "Pro", monthly: 19, yearly: 190, note: "", cta: "Get Pro", href: `mailto:${CONTACT}?subject=EminifyBot%20Pro`, primary: false,
+  { name: "Pro", monthly: 19, yearly: 190, note: "", cta: "Get Pro", href: `mailto:${CONTACT}?subject=OrraBot%20Pro`, primary: false,
     items: ["3 organisations", "Budgets and usage per organisation", "Billing export and audit log", "Email support"] },
-  { name: "Pro Lifetime", badge: "Launch", once: 149, note: "Founder price for the first 300 buyers, then $199, then $249", cta: "Get Lifetime", href: `mailto:${CONTACT}?subject=EminifyBot%20Lifetime`, primary: true,
+  { name: "Pro Lifetime", badge: "Launch", once: 149, note: "Founder price for the first 300 buyers, then $199, then $249", cta: "Get Lifetime", href: `mailto:${CONTACT}?subject=OrraBot%20Lifetime`, primary: true,
     items: ["Everything in Pro, for good", "All future Pro features", "Founder badge and early builds", "Hosted add-ons billed separately"] },
-  { name: "Agency", monthly: 99, yearly: 990, note: "10 client organisations, then $9 each", cta: "Get Agency", href: `mailto:${CONTACT}?subject=EminifyBot%20Agency`, primary: false,
+  { name: "Agency", monthly: 99, yearly: 990, note: "10 client organisations, then $9 each", cta: "Get Agency", href: `mailto:${CONTACT}?subject=OrraBot%20Agency`, primary: false,
     items: ["Everything in Pro", "White-label per client", "Branded client reports", "Priority support"] },
 ] as const;
 
 export const FAQS = [
-  ["How is EminifyBot different from an AI assistant?", "An assistant answers questions. EminifyBot bots do the work: each has its own computer, signs in to your apps, runs on a schedule and asks before anything risky. You can run many at once."],
+  ["How is OrraBot different from an AI assistant?", "An assistant answers questions. OrraBot bots do the work: each has its own computer, signs in to your apps, runs on a schedule and asks before anything risky. You can run many at once."],
   ["What is an organisation?", "A completely separate workspace for one company: its own bots, Chief of Staff, channels, memory, AI logins, API keys, budget and brand. Only one runs at a time, and the others are locked on disk while you work."],
   ["Which AI do the bots use?", "The claude, codex and grok command-line tools on your computer, with your existing subscriptions or API keys. You pick a model per bot and can switch whenever you like."],
   ["How much does it cost to run?", "The Personal plan is free, with unlimited bots in one organisation. AI usage is billed by your provider as usual. Cloud desktops and hosted voices are billed by those services, only if you use them."],
-  ["Does my data leave my computer?", "Transcripts, memory and keys stay on your machine. Bots send prompts to the AI provider you chose and use the apps you connected. EminifyBot itself collects no analytics."],
+  ["Does my data leave my computer?", "Transcripts, memory and keys stay on your machine. Bots send prompts to the AI provider you chose and use the apps you connected. OrraBot itself collects no analytics."],
   ["Can a bot control my own computer?", "Only if you turn it on, and only on macOS or Ubuntu with Xorg. Otherwise bots use a separate cloud desktop or a local virtual machine."],
   ["Is it open source?", "Yes. The app is Apache 2.0 licensed and the source is on GitHub."],
 ] as const;

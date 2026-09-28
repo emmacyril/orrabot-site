@@ -1,4 +1,4 @@
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { ThemeToggle } from "./ThemeToggle";
 import { REPO } from "@/lib/content";
 
@@ -6,7 +6,7 @@ export function Nav() {
   return (
     <header className="nav">
       <div className="wrap">
-        <a className="logo" href="#top"><Emi color="#7B61FF" />EminifyBot</a>
+        <a className="logo" href="#top"><Orra color="#FF6B3D" />OrraBot</a>
         <nav className="nav-links" aria-label="Sections">
           <a href="#download">Download</a>
           <a href="#demo">Demo</a>

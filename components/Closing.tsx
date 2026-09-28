@@ -1,4 +1,4 @@
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { FAQS, REPO, RELEASES, CONTACT } from "@/lib/content";
 
 export function Faq() {
@@ -16,12 +16,12 @@ export function FinalCta() {
   return (
     <section className="sec final band">
       <div className="wrap">
-        <Emi className="emi-big" color="#7B61FF" />
+        <Orra className="orra-big" color="#FF6B3D" />
         <h2>Meet your first bot</h2>
         <p>Free, open source, and running in about two minutes.</p>
         <div className="ctas">
-          <a className="btn btn-primary" href="#download">Download EminifyBot</a>
-          <a className="btn btn-quiet" href={`mailto:${CONTACT}?subject=EminifyBot%20demo`}>Book a demo</a>
+          <a className="btn btn-primary" href="#download">Download OrraBot</a>
+          <a className="btn btn-quiet" href={`mailto:${CONTACT}?subject=OrraBot%20demo`}>Book a demo</a>
         </div>
       </div>
     </section>
@@ -34,14 +34,14 @@ export function Footer() {
       <div className="wrap">
         <div className="foot">
           <div>
-            <a className="logo" href="#top"><Emi color="#7B61FF" />EminifyBot</a>
-            <p className="blurb">A team of AI bots in a chat app, with a separate team for every company you run. Made by Eminify.</p>
+            <a className="logo" href="#top"><Orra color="#FF6B3D" />OrraBot</a>
+            <p className="blurb">A team of AI bots in a chat app, with a separate team for every company you run. Made by OrraBot.</p>
           </div>
           <div><h4>Product</h4><a href="#download">Download</a><a href="#demo">Demo</a><a href="#features">Features</a><a href="#pricing">Pricing</a></div>
           <div><h4>Project</h4><a href={REPO}>GitHub</a><a href={RELEASES}>Releases</a><a href={`${REPO}/blob/main/LICENSE`}>Licence</a></div>
           <div><h4>Contact</h4><span>{CONTACT}</span><a href="#faq">FAQs</a></div>
         </div>
-        <div className="legal"><span>© {new Date().getFullYear()} Eminify</span><span>Apache License 2.0</span></div>
+        <div className="legal"><span>© {new Date().getFullYear()} OrraBot</span><span>Apache License 2.0</span></div>
       </div>
     </footer>
   );

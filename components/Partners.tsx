@@ -1,5 +1,5 @@
 const GROUPS = [
-  { label: "Models", desc: "Your login stays with the provider. EminifyBot never bills you for AI usage.", items: [
+  { label: "Models", desc: "Your login stays with the provider. OrraBot never bills you for AI usage.", items: [
     ["Claude", "Anthropic", "#D97757", "C"], ["Codex", "OpenAI", "#111111", "O"], ["Grok", "xAI", "#333333", "G"], ["Your own", "Any ACP CLI or API", "#6A4DFF", "+"],
   ] },
   { label: "Computers and apps", desc: "Where bots click, type and browse, and the apps they're allowed to use.", items: [

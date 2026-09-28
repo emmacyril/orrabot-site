@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { DEMO_ORGS, type Line } from "@/lib/content";
 
 type Shown = Line & { key: string; decided?: "allowed" | "denied" };
@@ -72,8 +72,8 @@ export function AppDemo() {
 
   return (
     <div className="stage">
-      <div className="win" aria-label="Interactive demo of the EminifyBot app">
-        <div className="win-bar"><i /><i /><i /><span>EminifyBot · {org.name}</span></div>
+      <div className="win" aria-label="Interactive demo of the OrraBot app">
+        <div className="win-bar"><i /><i /><i /><span>OrraBot · {org.name}</span></div>
         <div className="app">
           <aside className="side">
             <div className="orgsw">
@@ -98,7 +98,7 @@ export function AppDemo() {
               {org.bots.map((b) => (
                 <li key={b.id}>
                   <button type="button" className="bot" aria-current={b.id === bot.id} onClick={() => setBotId(b.id)}>
-                    <Emi color={b.color} />
+                    <Orra color={b.color} />
                     <span><b>{b.name}</b><small>{b.preview}</small></span>
                     <time>{b.time}</time>
                   </button>
@@ -111,11 +111,11 @@ export function AppDemo() {
             <div className="mobile-bots">
               {org.bots.map((b) => (
                 <button type="button" key={b.id} aria-current={b.id === bot.id} onClick={() => setBotId(b.id)}>
-                  <Emi color={b.color} />{b.name}
+                  <Orra color={b.color} />{b.name}
                 </button>
               ))}
             </div>
-            <div className="chat-top"><Emi color={bot.color} /><b>{bot.name}</b><span className="model">{bot.model}</span></div>
+            <div className="chat-top"><Orra color={bot.color} /><b>{bot.name}</b><span className="model">{bot.model}</span></div>
             <div className="feed" ref={feed} aria-live="polite">
               {lines.map((l) => {
                 if (l.kind === "you") return <div key={l.key} className="m you">{l.text}</div>;

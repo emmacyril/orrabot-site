@@ -1,33 +1,33 @@
 :root{
   color-scheme:light;
-  --ground:#F6F4FE; --surface:#FFFFFF; --raised:#FFFFFF; --sunk:#EFECFB;
-  --ink:#150C3A; --ink-2:#433B66; --muted:#6E6890; --line:#E3DFF4; --line-2:#D4CEEC;
-  --violet:#6A4DFF; --violet-2:#8B74FF; --violet-soft:#ECE8FF; --on-violet:#FFFFFF;
-  --win:#FFFFFF; --win-side:#F7F5FE; --bubble:#F1EEFC; --me:#150C3A; --on-me:#FFFFFF;
+  --ground:#FFF8F3; --surface:#FFFFFF; --raised:#FFFFFF; --sunk:#FBEFE6;
+  --ink:#1E0F0A; --ink-2:#4A3129; --muted:#86695D; --line:#F2E3D9; --line-2:#E8D2C4;
+  --violet:#E8552B; --violet-2:#FF7A45; --violet-soft:#FFE9DE; --on-violet:#FFFFFF;
+  --win:#FFFFFF; --win-side:#FFF6F0; --bubble:#FCEDE4; --me:#1E0F0A; --on-me:#FFFFFF;
   --ok:#16A06A; --warn:#E0A100;
   --sans:var(--font-onest),"Onest",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:var(--font-mono),"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --gutter:clamp(16px,4vw,40px);
   --r:18px;
-  --shadow:0 1px 0 rgba(21,12,58,.04),0 24px 60px -28px rgba(55,34,160,.28);
+  --shadow:0 1px 0 rgba(30,15,10,.04),0 24px 60px -28px rgba(160,60,20,.22);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --ground:#0D0A1A; --surface:#15112A; --raised:#1B1634; --sunk:#110D22;
-    --ink:#F1EEFF; --ink-2:#CFC8F0; --muted:#9A93BE; --line:#261F45; --line-2:#342B5C;
-    --violet:#8B74FF; --violet-2:#A694FF; --violet-soft:#241C4D; --on-violet:#0D0A1A;
-    --win:#15112A; --win-side:#110D22; --bubble:#221B40; --me:#F1EEFF; --on-me:#150C3A;
+    --ground:#140C09; --surface:#1E1410; --raised:#261A15; --sunk:#180F0C;
+    --ink:#FFF3EC; --ink-2:#F0D6C8; --muted:#B89A8C; --line:#33231C; --line-2:#463027;
+    --violet:#FF7A45; --violet-2:#FF9A6B; --violet-soft:#3A1E14; --on-violet:#140C09;
+    --win:#1E1410; --win-side:#180F0C; --bubble:#2E1E17; --me:#FFF3EC; --on-me:#1E0F0A;
     --ok:#3DD39A; --warn:#F2C14E;
     --shadow:0 1px 0 rgba(255,255,255,.03),0 30px 70px -30px rgba(0,0,0,.8);
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --ground:#0D0A1A; --surface:#15112A; --raised:#1B1634; --sunk:#110D22;
-  --ink:#F1EEFF; --ink-2:#CFC8F0; --muted:#9A93BE; --line:#261F45; --line-2:#342B5C;
-  --violet:#8B74FF; --violet-2:#A694FF; --violet-soft:#241C4D; --on-violet:#0D0A1A;
-  --win:#15112A; --win-side:#110D22; --bubble:#221B40; --me:#F1EEFF; --on-me:#150C3A;
+  --ground:#140C09; --surface:#1E1410; --raised:#261A15; --sunk:#180F0C;
+  --ink:#FFF3EC; --ink-2:#F0D6C8; --muted:#B89A8C; --line:#33231C; --line-2:#463027;
+  --violet:#FF7A45; --violet-2:#FF9A6B; --violet-soft:#3A1E14; --on-violet:#140C09;
+  --win:#1E1410; --win-side:#180F0C; --bubble:#2E1E17; --me:#FFF3EC; --on-me:#1E0F0A;
   --ok:#3DD39A; --warn:#F2C14E;
   --shadow:0 1px 0 rgba(255,255,255,.03),0 30px 70px -30px rgba(0,0,0,.8);
 }
@@ -169,7 +169,7 @@ p{margin:0}
 .b-work{background:color-mix(in srgb,var(--warn) 18%,transparent);color:color-mix(in srgb,var(--warn) 80%,var(--ink))}
 .b-ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
 .b-v{background:var(--violet-soft);color:var(--violet)}
-.screen{flex:1;border-radius:10px;background:linear-gradient(135deg,#2A1F6B,#6A4DFF 55%,#B8A9FF);position:relative;min-height:130px;overflow:hidden}
+.screen{flex:1;border-radius:10px;background:linear-gradient(135deg,#5A1E0E,#E8552B 55%,#FFB58C);position:relative;min-height:130px;overflow:hidden}
 .screen .pane{position:absolute;left:14%;right:14%;top:16%;bottom:0;background:#0F0B22;border-radius:8px 8px 0 0;padding:12px;display:grid;gap:7px;align-content:start}
 .screen .pane i{display:block;height:7px;border-radius:4px;background:#2B2450}
 .screen .pane i:nth-child(2){width:70%}.screen .pane i:nth-child(3){width:85%}.screen .pane i:nth-child(4){width:55%}
@@ -275,7 +275,7 @@ p{margin:0}
 
 /* final */
 .final{text-align:center}
-.final .emi-big{width:120px;height:120px;margin-inline:auto;animation:bob 3.2s ease-in-out infinite}
+.final .orra-big{width:120px;height:120px;margin-inline:auto;animation:bob 3.2s ease-in-out infinite}
 .final h2{font-size:clamp(40px,6vw,72px);font-weight:800;letter-spacing:-.04em;line-height:1;margin-top:22px}
 .final p{margin-top:14px;color:var(--muted);font-size:18px}
 .final .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:28px}

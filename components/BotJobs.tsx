@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { ROLES } from "@/lib/content";
 
 export function BotJobs() {
@@ -14,7 +14,7 @@ export function BotJobs() {
           <div className="roles">
             {ROLES.map((r, i) => (
               <button key={r.name} type="button" className="role" aria-pressed={i === ix} onClick={() => setIx(i)}>
-                <Emi color={r.color} />{r.name}
+                <Orra color={r.color} />{r.name}
               </button>
             ))}
           </div>
@@ -24,7 +24,7 @@ export function BotJobs() {
         <div className="phone" aria-label="Phone preview">
           <div className="scr">
             <div className="notch" />
-            <div className="ph-top"><Emi color={role.color} /><span>{role.name}</span></div>
+            <div className="ph-top"><Orra color={role.color} /><span>{role.name}</span></div>
             <div className="ph-feed" key={role.name}>
               {role.feed.map((f, i) => f.kind === "draft" ? (
                 <div className="draft" key={i}>

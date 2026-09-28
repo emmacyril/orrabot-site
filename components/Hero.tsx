@@ -1,4 +1,4 @@
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { AppDemo } from "./AppDemo";
 import { EMI } from "@/lib/content";
 import type { Downloads } from "@/lib/release";
@@ -9,11 +9,11 @@ export function Hero({ downloads }: { downloads: Downloads }) {
   return (
     <section className="hero wrap" id="demo">
       <div className="crew" aria-hidden="true">
-        {Object.values(EMI).map((c) => <Emi key={c} color={c} />)}
+        {Object.values(EMI).map((c) => <Orra key={c} color={c} />)}
       </div>
       <a className="pill" href="#organisations"><b>New</b>Organisations: a separate team for every company →</a>
       <h1>Your AI team, <span>one chat away.</span></h1>
-      <p className="sub">Every contact in EminifyBot is a bot that does real work. Brief it like a teammate, watch it use its own computer and your apps, and approve what matters. Run a separate team for every company you look after.</p>
+      <p className="sub">Every contact in OrraBot is a bot that does real work. Brief it like a teammate, watch it use its own computer and your apps, and approve what matters. Run a separate team for every company you look after.</p>
       <div className="ctas">
         <a className="btn btn-primary" href={downloads.macArm}>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={APPLE} /></svg>Download for macOS

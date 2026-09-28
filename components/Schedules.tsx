@@ -1,4 +1,4 @@
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { JOBS } from "@/lib/content";
 
 export function Schedules() {
@@ -9,7 +9,7 @@ export function Schedules() {
       <div className="grid4">
         {JOBS.map((j) => (
           <div className="jc" key={j.title}>
-            <Emi color={j.color} />
+            <Orra color={j.color} />
             <h3>{j.title}</h3>
             <span className="when">{j.when}</span>
             <p>{j.text}</p>

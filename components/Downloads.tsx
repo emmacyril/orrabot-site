@@ -1,4 +1,4 @@
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { EMI, RELEASES } from "@/lib/content";
 import type { Downloads as D } from "@/lib/release";
 
@@ -14,11 +14,11 @@ export function Downloads({ downloads }: { downloads: D }) {
   return (
     <section className="sec wrap" id="download">
       <h2 className="sec-title">Download</h2>
-      <p className="sec-sub">Everything EminifyBot needs is inside the app. Install it, sign in to one AI engine, and create your first bot.</p>
+      <p className="sec-sub">Everything OrraBot needs is inside the app. Install it, sign in to one AI engine, and create your first bot.</p>
       <div className="dls">
         {cards.map((c) => (
           <div className="dlc" key={c.os}>
-            <div className="os"><Emi color={c.color} /><h3>{c.os}</h3></div>
+            <div className="os"><Orra color={c.color} /><h3>{c.os}</h3></div>
             <ul>{c.facts.map((f) => <li key={f}>{f}</li>)}</ul>
             <div className="btns">
               {c.links.map(([label, href, primary]) => (

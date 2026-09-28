@@ -1,10 +1,10 @@
-<p align="center"><img src="app/icon.svg" width="72" alt="Emi"></p>
+<p align="center"><img src="app/icon.svg" width="72" alt="Orra"></p>
 
-<h1 align="center">eminifybot.com</h1>
+<h1 align="center">orrabot.ai</h1>
 
-<p align="center">The landing page for <a href="https://github.com/emmacyril/EminifyBot">EminifyBot</a>, your AI team in a chat app.</p>
+<p align="center">The landing page for <a href="https://github.com/emmacyril/orrabot">OrraBot</a>, your AI team in a chat app.</p>
 
-<p align="center"><img src="public/screenshots/hero.png" alt="The EminifyBot app shown on the site" width="820"></p>
+<p align="center"><img src="public/screenshots/hero.png" alt="The OrraBot app shown on the site" width="820"></p>
 
 ---
 
@@ -34,11 +34,11 @@ npm run typecheck
 
 ## Deploy
 
-Import this repository in Vercel. It detects Next.js; no settings or environment variables are needed. Add `eminifybot.com` under Project → Domains.
+Import this repository in Vercel. It detects Next.js; no settings or environment variables are needed. Add `orrabot.ai` under Project → Domains.
 
 ## Screenshots
 
-`public/screenshots/*.png` are captured from the real EminifyBot app running against an isolated test instance. Replace a file with the same name to update it; a feature card only shows an image when its file exists.
+`public/screenshots/*.png` are captured from the real OrraBot app running against an isolated test instance. Replace a file with the same name to update it; a feature card only shows an image when its file exists.
 
 | File | Used for |
 |---|---|
@@ -54,7 +54,7 @@ Import this repository in Vercel. It detects Next.js; no settings or environment
 
 ## `public/policy.json`: remote control for every installed app
 
-Every EminifyBot install reads https://eminifybot.com/policy.json (falling back to this repo's raw copy) at start and every 6 hours, and caches it. Editing it and pushing reaches all copies, including ones downloaded before a change.
+Every OrraBot install reads https://orrabot.ai/policy.json (falling back to this repo's raw copy) at start and every 6 hours, and caches it. Editing it and pushing reaches all copies, including ones downloaded before a change.
 
 | Field | Effect |
 |---|---|

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
-import { Emi } from "./Emi";
+import { Orra } from "./Orra";
 import { FEATURES } from "@/lib/content";
 
 function shotExists(name: string) {
@@ -18,12 +18,12 @@ export function Features() {
       <div className="grid3">
         {FEATURES.map((f) => (
           <div className="ft" key={f.title}>
-            <Emi className="ic" color={f.color} />
+            <Orra className="ic" color={f.color} />
             <h3>{f.title}</h3>
             <p>{f.text}</p>
             {shotExists(f.shot) && (
               <div className="shot">
-                <Image src={`/screenshots/${f.shot}.png`} alt={`${f.title} in EminifyBot`} fill sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 380px" />
+                <Image src={`/screenshots/${f.shot}.png`} alt={`${f.title} in OrraBot`} fill sizes="(max-width: 620px) 100vw, (max-width: 980px) 50vw, 380px" />
               </div>
             )}
           </div>
