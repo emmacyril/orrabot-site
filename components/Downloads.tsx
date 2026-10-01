@@ -1,5 +1,5 @@
 import { Orra } from "./Orra";
-import { EMI, RELEASES } from "@/lib/content";
+import { EMI } from "@/lib/content";
 import type { Downloads as D } from "@/lib/release";
 
 export function Downloads({ downloads }: { downloads: D }) {
@@ -28,7 +28,7 @@ export function Downloads({ downloads }: { downloads: D }) {
           </div>
         ))}
       </div>
-      <p className="dl-foot">Always the latest build{downloads.version ? ` (v${downloads.version})` : ""} · <a href={RELEASES}>all releases</a> · needs the claude, codex or grok CLI, signed in</p>
+      <p className="dl-foot">Always the latest build{downloads.version ? ` (v${downloads.version})` : ""} · <a href="/download">all downloads, including Android</a> · <a href="/docs/getting-started">getting started</a></p>
     </section>
   );
 }

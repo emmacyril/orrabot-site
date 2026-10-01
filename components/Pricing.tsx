@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { TIERS, CONTACT } from "@/lib/content";
+import { TIERS, contactHref } from "@/lib/content";
 
 export function Pricing() {
   const [yearly, setYearly] = useState(false);
@@ -30,7 +30,7 @@ export function Pricing() {
       </div>
       <div className="enterprise">
         <span><b>Hosted add-ons, any plan:</b> always-on bot computers from $29 a month each, managed AI credits, and phone access.</span>
-        <a className="btn btn-quiet" href={`mailto:${CONTACT}?subject=OrraBot%20hosted`}>Contact sales</a>
+        <a className="btn btn-quiet" href={contactHref("question")}>Contact sales</a>
       </div>
     </section>
   );

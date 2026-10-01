@@ -2,7 +2,7 @@
 
 <h1 align="center">orrabot.ai</h1>
 
-<p align="center">The landing page for <a href="https://github.com/emmacyril/orrabot">OrraBot</a>, your AI team in a chat app.</p>
+<p align="center">The landing page for <a href="https://orrabot-site.vercel.app">OrraBot</a>, your AI team in a chat app.</p>
 
 <p align="center"><img src="public/screenshots/hero.png" alt="The OrraBot app shown on the site" width="820"></p>
 

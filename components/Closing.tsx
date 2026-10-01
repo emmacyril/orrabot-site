@@ -1,5 +1,5 @@
 import { Orra } from "./Orra";
-import { FAQS, REPO, RELEASES, CONTACT } from "@/lib/content";
+import { FAQS, contactHref } from "@/lib/content";
 
 export function Faq() {
   return (
@@ -18,10 +18,10 @@ export function FinalCta() {
       <div className="wrap">
         <Orra className="orra-big" color="#FF6B3D" />
         <h2>Meet your first bot</h2>
-        <p>Free, open source, and running in about two minutes.</p>
+        <p>Free to start, and running in about two minutes.</p>
         <div className="ctas">
-          <a className="btn btn-primary" href="#download">Download OrraBot</a>
-          <a className="btn btn-quiet" href={`mailto:${CONTACT}?subject=OrraBot%20demo`}>Book a demo</a>
+          <a className="btn btn-primary" href="/download">Download OrraBot</a>
+          <a className="btn btn-quiet" href={contactHref("question")}>Book a demo</a>
         </div>
       </div>
     </section>
@@ -34,14 +34,14 @@ export function Footer() {
       <div className="wrap">
         <div className="foot">
           <div>
-            <a className="logo" href="#top"><Orra color="#FF6B3D" />OrraBot</a>
+            <a className="logo" href="/"><Orra color="#FF6B3D" />OrraBot</a>
             <p className="blurb">A team of AI bots in a chat app, with a separate team for every company you run. Made by OrraBot.</p>
           </div>
-          <div><h4>Product</h4><a href="#download">Download</a><a href="#demo">Demo</a><a href="#features">Features</a><a href="#pricing">Pricing</a></div>
-          <div><h4>Project</h4><a href={REPO}>GitHub</a><a href={RELEASES}>Releases</a><a href={`${REPO}/blob/main/LICENSE`}>Licence</a></div>
-          <div><h4>Contact</h4><span>{CONTACT}</span><a href="#faq">FAQs</a></div>
+          <div><h4>Product</h4><a href="/download">Download</a><a href="/#demo">Demo</a><a href="/#features">Features</a><a href="/#pricing">Pricing</a></div>
+          <div><h4>Help</h4><a href="/docs">Help centre</a><a href="/docs/getting-started">Getting started</a><a href="/docs/troubleshooting">Troubleshooting</a><a href="/docs/updates">Updates</a></div>
+          <div><h4>Contact</h4><a href="/contact">Contact us</a><a href={contactHref("feedback")}>Send feedback</a><a href={contactHref("bug")}>Report a bug</a><a href="/#faq">FAQs</a></div>
         </div>
-        <div className="legal"><span>© {new Date().getFullYear()} OrraBot</span><span>Apache License 2.0</span></div>
+        <div className="legal"><span>© {new Date().getFullYear()} OrraBot</span><span>Made for every team</span></div>
       </div>
     </footer>
   );

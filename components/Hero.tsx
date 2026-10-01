@@ -18,9 +18,9 @@ export function Hero({ downloads }: { downloads: Downloads }) {
         <a className="btn btn-primary" href={downloads.macArm}>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={APPLE} /></svg>Download for macOS
         </a>
-        <a className="btn btn-quiet" href="#download">Windows &amp; Linux</a>
+        <a className="btn btn-quiet" href="/download">Windows, Linux &amp; phones</a>
       </div>
-      <p className="fine">Free · Apache 2.0 · runs on the Claude, Codex or Grok plan you already have{downloads.version ? ` · v${downloads.version}` : ""}</p>
+      <p className="fine">Free to start · Praxiom AI built in, or bring your own provider{downloads.version ? ` · v${downloads.version}` : ""}</p>
       <AppDemo />
     </section>
   );
