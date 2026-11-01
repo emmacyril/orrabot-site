@@ -7,13 +7,13 @@ const onest = Onest({ subsets: ["latin"], variable: "--font-onest", display: "sw
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://orrabot.ai"),
+  metadataBase: new URL("https://www.orrabot.online"),
   title: "OrraBot: your AI team, one chat away",
   description: "Your own team of AI bots in a chat app, with a separate team for every company you run. Praxiom AI built in, or bring your own provider. Free for macOS, Windows and Linux.",
   openGraph: {
     title: "OrraBot: your AI team, one chat away",
     description: "Brief AI bots like teammates. Give every company its own team, budget and brand. Free desktop app.",
-    url: "https://orrabot.ai",
+    url: "https://www.orrabot.online",
     siteName: "OrraBot",
     type: "website",
   },

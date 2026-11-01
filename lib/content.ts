@@ -146,22 +146,30 @@ export const JOBS = [
   { title: "Client report", when: "1st of the month", color: "#E0673A", text: "Builds each client's monthly report, with that client's logo and your billable hours.", apps: ["Docs", "Harvest"] },
 ];
 
+/** OrraBot's account service, where plans are paid in USD or Espees (orra/cloudflare/billing.ts in the app repo).
+ * The same address the app checks licence keys at (policy.json services.billingUrl). */
+export const BILLING_URL = "https://accounts.orrabot.online/v1/billing";
+/** Enterprise is arranged by email. */
+export const SALES_EMAIL = "sales@orrabot.online";
+const checkout = (plan: string) => `${BILLING_URL}/checkout?plan=${plan}`;
+
+/** Per person per month, in USD (the same prices as billing.ts PLANS). */
 export const TIERS = [
-  { name: "Personal", monthly: 0, yearly: 0, note: "Free forever", cta: "Download", href: "/download", primary: false,
-    items: ["1 organisation", "Unlimited bots", "Computers, apps and voice", "All approval levels", "Your own AI plans and keys"] },
-  { name: "Pro", monthly: 19, yearly: 190, note: "", cta: "Get Pro", href: contactHref("question"), primary: false,
-    items: ["3 organisations", "Budgets and usage per organisation", "Billing export and audit log", "Email support"] },
-  { name: "Pro Lifetime", badge: "Launch", once: 149, note: "Founder price for the first 300 buyers, then $199, then $249", cta: "Get Lifetime", href: contactHref("question"), primary: true,
-    items: ["Everything in Pro, for good", "All future Pro features", "Founder badge and early builds", "Hosted add-ons billed separately"] },
-  { name: "Agency", monthly: 99, yearly: 990, note: "10 client organisations, then $9 each", cta: "Get Agency", href: contactHref("question"), primary: false,
-    items: ["Everything in Pro", "White-label per client", "Branded client reports", "Priority support"] },
+  { name: "Free", monthly: 0, note: "Free forever", cta: "Download", href: "/download", primary: false,
+    items: ["1 person", "1 assistant", "1 automation"] },
+  { name: "Starter", monthly: 6, note: "Billed monthly", cta: "Get Starter", href: checkout("starter"), primary: false,
+    items: ["5 assistants", "10 automations"] },
+  { name: "Pro", monthly: 12, note: "Billed monthly", cta: "Get Pro", href: checkout("pro"), primary: true,
+    items: ["Unlimited assistants and automations", "The phone app", "Remote access", "Voice"] },
+  { name: "Business", monthly: 24, note: "Billed monthly, for 5 people or more", cta: "Get Business", href: checkout("business"), primary: false,
+    items: ["Everything in Pro", "Admin and shared assistants", "Budgets and the audit log"] },
 ] as const;
 
 export const FAQS = [
   ["How is OrraBot different from an AI assistant?", "An assistant answers questions. OrraBot bots do the work: each has its own computer, signs in to your apps, runs on a schedule and asks before anything risky. You can run many at once."],
   ["What is an organisation?", "A completely separate workspace for one company: its own bots, Chief of Staff, channels, memory, AI logins, API keys, budget and brand. Only one runs at a time, and the others are locked on disk while you work."],
   ["Which AI do the bots use?", "Praxiom is built in: paste a Praxiom API key and your bots are ready. Turn on Other AI providers to also use Claude, Codex, DeepSeek, local models such as Ollama, or any OpenAI-compatible service. You pick a model per bot and can switch whenever you like."],
-  ["How much does it cost to run?", "The Personal plan is free, with unlimited bots in one organisation. AI usage is billed by your provider as usual. Cloud desktops and hosted voices are billed by those services, only if you use them."],
+  ["How much does it cost to run?", "The Free plan costs nothing: 1 person, 1 assistant and 1 automation. Starter, Pro and Business are priced per person per month in US dollars, paid by card or with Espees. AI usage is billed by your provider as usual. Cloud desktops and hosted voices are billed by those services, only if you use them."],
   ["Does my data leave my computer?", "Transcripts, memory and keys stay on your machine. Bots send prompts to the AI provider you chose and use the apps you connected. OrraBot itself collects no analytics."],
   ["Can a bot control my own computer?", "Only if you turn it on, and only on macOS or Ubuntu with Xorg. Otherwise bots use a separate cloud desktop or a local virtual machine."],
   ["Where do I get help?", "The help centre at /docs covers setup, AI providers, automations, phones and backups. For anything else, use the contact form."],

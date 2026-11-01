@@ -1,36 +1,24 @@
-"use client";
-import { useState } from "react";
-import { TIERS, contactHref } from "@/lib/content";
+import { SALES_EMAIL, TIERS } from "@/lib/content";
 
 export function Pricing() {
-  const [yearly, setYearly] = useState(false);
   return (
     <section className="sec wrap center" id="pricing">
       <h2 className="sec-title">Pricing</h2>
-      <p className="sec-sub">Your bots run on your own AI plans, so OrraBot charges per company, never per token.</p>
-      <div className="period" role="group" aria-label="Billing period">
-        <button type="button" aria-pressed={!yearly} onClick={() => setYearly(false)}>Monthly</button>
-        <button type="button" aria-pressed={yearly} onClick={() => setYearly(true)}>Yearly <span>2 months free</span></button>
-      </div>
+      <p className="sec-sub">Per person, per month, in US dollars. Pay by card or with Espees (1 Espee = $1.60). Your bots use your own AI plans, so AI usage is never billed here.</p>
       <div className="tiers">
-        {TIERS.map((t) => {
-          const once = "once" in t;
-          const amount = once ? t.once : yearly ? t.yearly : t.monthly;
-          const unit = once ? " once" : amount === 0 ? "" : yearly ? " / year" : " / month";
-          return (
-            <div className={`tier${t.primary ? " pick" : ""}`} key={t.name}>
-              <div className="nm">{t.name}{"badge" in t && <span className="badge b-v">{t.badge}</span>}</div>
-              <div className="price">${amount}<small>{unit}</small></div>
-              <p className="note">{t.note || (yearly ? "Billed yearly" : "Billed monthly")}</p>
-              <a className={`btn ${t.primary ? "btn-primary" : "btn-quiet"}`} href={t.href}>{t.cta}</a>
-              <ul>{t.items.map((i) => <li key={i}>{i}</li>)}</ul>
-            </div>
-          );
-        })}
+        {TIERS.map((t) => (
+          <div className={`tier${t.primary ? " pick" : ""}`} key={t.name}>
+            <div className="nm">{t.name}</div>
+            <div className="price">${t.monthly}<small>{t.monthly === 0 ? "" : " / person / month"}</small></div>
+            <p className="note">{t.note}</p>
+            <a className={`btn ${t.primary ? "btn-primary" : "btn-quiet"}`} href={t.href}>{t.cta}</a>
+            <ul>{t.items.map((i) => <li key={i}>{i}</li>)}</ul>
+          </div>
+        ))}
       </div>
       <div className="enterprise">
-        <span><b>Hosted add-ons, any plan:</b> always-on bot computers from $29 a month each, managed AI credits, and phone access.</span>
-        <a className="btn btn-quiet" href={contactHref("question")}>Contact sales</a>
+        <span><b>Enterprise, from $20,000 a year:</b> for larger organisations, arranged with us directly.</span>
+        <a className="btn btn-quiet" href={`mailto:${SALES_EMAIL}`}>Contact sales</a>
       </div>
     </section>
   );

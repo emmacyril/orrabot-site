@@ -2,37 +2,73 @@
   "schema": 1,
   "plans": {
     "enforce": false,
-    "upgradeUrl": "https://orrabot.ai/#pricing",
+    "upgradeUrl": "https://orrabot.online/#pricing",
     "limits": {
       "free": {
         "organisations": 1,
         "exports": false,
-        "whiteLabel": false
+        "whiteLabel": false,
+        "assistants": 1,
+        "automations": 1,
+        "phone": false,
+        "remoteAccess": false,
+        "voice": false
+      },
+      "starter": {
+        "organisations": 1,
+        "exports": false,
+        "whiteLabel": false,
+        "assistants": 5,
+        "automations": 10,
+        "phone": false,
+        "remoteAccess": false,
+        "voice": false
       },
       "pro": {
         "organisations": 3,
         "exports": true,
-        "whiteLabel": false
+        "whiteLabel": false,
+        "assistants": null,
+        "automations": null,
+        "phone": true,
+        "remoteAccess": true,
+        "voice": true
+      },
+      "business": {
+        "organisations": null,
+        "exports": true,
+        "whiteLabel": false,
+        "assistants": null,
+        "automations": null,
+        "phone": true,
+        "remoteAccess": true,
+        "voice": true
       },
       "agency": {
         "organisations": null,
         "exports": true,
-        "whiteLabel": true
+        "whiteLabel": true,
+        "assistants": null,
+        "automations": null,
+        "phone": true,
+        "remoteAccess": true,
+        "voice": true
       }
     }
   },
   "licence": {
-    "provider": null,
+    "provider": "orrabot",
     "organizationId": null,
     "plans": {}
   },
   "update": {
     "minimumVersion": null,
     "message": null,
-    "downloadUrl": "https://orrabot.ai/#download"
+    "downloadUrl": "https://orrabot.online/#download"
   },
   "services": {
     "controlPlaneUrl": "https://accounts.eminifybot.com",
+    "billingUrl": "https://accounts.orrabot.online/v1/billing",
     "voiceUrl": "https://voice.eminifybot.com",
     "voiceKey": "h21DWtfUE2egtO43W6sIhlOa8ptGkPUPlSaOfocm"
   }

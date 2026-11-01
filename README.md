@@ -1,8 +1,8 @@
 <p align="center"><img src="app/icon.svg" width="72" alt="Orra"></p>
 
-<h1 align="center">orrabot.ai</h1>
+<h1 align="center">orrabot.online</h1>
 
-<p align="center">The landing page for <a href="https://orrabot-site.vercel.app">OrraBot</a>, your AI team in a chat app.</p>
+<p align="center">The landing page for <a href="https://www.orrabot.online">OrraBot</a>, your AI team in a chat app.</p>
 
 <p align="center"><img src="public/screenshots/hero.png" alt="The OrraBot app shown on the site" width="820"></p>
 
@@ -34,7 +34,7 @@ npm run typecheck
 
 ## Deploy
 
-Import this repository in Vercel. It detects Next.js; no settings or environment variables are needed. Add `orrabot.ai` under Project → Domains.
+Import this repository in Vercel. It detects Next.js; no settings or environment variables are needed. Add `orrabot.online` and `www.orrabot.online` under Project → Domains (the bare domain redirects to www).
 
 ## Screenshots
 
@@ -54,14 +54,15 @@ Import this repository in Vercel. It detects Next.js; no settings or environment
 
 ## `public/policy.json`: remote control for every installed app
 
-Every OrraBot install reads https://orrabot.ai/policy.json (falling back to this repo's raw copy) at start and every 6 hours, and caches it. Editing it and pushing reaches all copies, including ones downloaded before a change.
+Every OrraBot install reads https://orrabot.online/policy.json (falling back to this repo's raw copy) at start and every 6 hours, and caches it. Editing it and pushing reaches all copies, including ones downloaded before a change.
 
 | Field | Effect |
 |---|---|
 | `plans.enforce` | `true` turns paid plans on. Installs without a licence drop to the free limits: 1 organisation, no budgets/billing/audit exports, no white-label. Extra organisations are kept safe but can't be opened until the user upgrades. |
-| `plans.limits` | Limits per plan (`organisations: null` means unlimited). |
-| `licence.provider` | `"polar"` or `"lemonsqueezy"`. Keys entered in the app (Organisations → Enter Licence Key…) are checked with that provider. `organizationId` is the Polar organisation id; `plans` maps a Polar benefit id or Lemon Squeezy variant/product id to `"pro"` or `"agency"` (default `"pro"`). |
+| `plans.limits` | Limits per plan (`free`, `starter`, `pro`, `business`, `agency`): `organisations`, `assistants` and `automations` (`null` means unlimited), and `exports`, `whiteLabel`, `phone` (the phone app), `remoteAccess` and `voice` (true or false). |
+| `licence.provider` | `"orrabot"`: keys entered in the app (Enter Licence Key…) are checked at `services.billingUrl`, OrraBot's own subscriptions. `"polar"` and `"lemonsqueezy"` are also understood (`organizationId`, `plans`). |
 | `update.minimumVersion` | e.g. `"0.2.0"`: older versions show "Please update" and quit. |
 | `services.controlPlaneUrl` | Account service for phone pairing and remote access. |
+| `services.billingUrl` | OrraBot's subscriptions (https://accounts.orrabot.online/v1/billing): checkout, licence checks and renewals. The Buy buttons on the pricing section link there too (`BILLING_URL` in `lib/content.ts`). |
 
 Malformed values are ignored and the app keeps its defaults, so a typo can't break installs. Validate before pushing: `node -e "JSON.parse(require('fs').readFileSync('public/policy.json','utf8'))"`.
